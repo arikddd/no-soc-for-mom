@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security weakness privately
+    url: https://github.com/arikddd/no-soc-for-mom/security/advisories/new
+    about: A message or page that can make the bot call a scam safe, bypass the allowlist, or inject instructions. Please do not open a public issue for these.

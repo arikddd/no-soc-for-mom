@@ -1,0 +1,41 @@
+name: Setup or workflow problem
+description: Import, credentials, a node that fails, Telegram or WhatsApp intake
+title: "[Setup] "
+labels: ["setup"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste API keys, bot tokens, access tokens, webhook URLs or your n8n hostname.** Replace them with `<redacted>`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Failing node
+      placeholder: Report, VirusTotal HTTP Request, WhatsApp verdict (Scam)…
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      description: From the n8n execution view, with secrets redacted.
+      render: text
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Intake channel
+      options:
+        - Telegram
+        - WhatsApp
+        - Both
+        - Not related to a channel
+  - type: input
+    id: version
+    attributes:
+      label: n8n version and how it runs
+      placeholder: 2.27.4, Docker on a Raspberry Pi

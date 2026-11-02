@@ -2,9 +2,11 @@
 
 No SOC for Mom covers two investigations today: phishing messages and overpriced dropshipping stores. Families face more: romance and investment scams, "Mom, I lost my phone" messages, fake tech support, fake rental listings. If you have built, or want to build, an investigation workflow for one of them, this repository is where it belongs.
 
+Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## How contributions work
 
-1. **Open an issue first** for anything bigger than a fix: the threat, how it reaches a family, what evidence a workflow could gather, and what a plain-language verdict would say.
+1. **Open an issue first** for anything bigger than a fix, using the *Propose a new investigation* form: the threat, how it reaches a family, what evidence a workflow could gather, and what a plain-language verdict would say.
 2. **Fork the repository**, create a branch, and make your change.
 3. **Open a pull request** against `main` and fill in the template.
 4. The maintainer reviews it. Nothing reaches `main` without an approving review, and the maintainer may ask for changes before merging.

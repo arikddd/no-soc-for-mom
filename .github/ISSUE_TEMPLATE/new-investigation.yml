@@ -1,0 +1,53 @@
+name: Propose a new investigation
+description: A family-facing threat that deserves its own workflow
+title: "[Investigation] "
+labels: ["new investigation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new investigation. Describe the threat in general terms.
+        **Do not include** real names, phone numbers, account details, or messages that identify you or your family. Defang any link (`hxxps://example[.]com`).
+  - type: input
+    id: threat
+    attributes:
+      label: The threat
+      description: One line, as a family member would describe it.
+      placeholder: '"Mom, I lost my phone, this is my new number" messages'
+    validations:
+      required: true
+  - type: textarea
+    id: how-it-arrives
+    attributes:
+      label: How it reaches a family
+      description: The channel (SMS, WhatsApp, email, ad, phone call), what the first contact looks like, and what it asks the victim to do.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence a workflow could gather
+      description: Lookups, signals or patterns that separate the scam from the real thing. Free or self-hostable sources are preferred.
+    validations:
+      required: true
+  - type: textarea
+    id: verdict
+    attributes:
+      label: What the verdict should say
+      description: The plain-language answer and the one thing the family member should do.
+  - type: input
+    id: region
+    attributes:
+      label: Region and language
+      description: Where you have seen it, and in which language the messages arrive.
+      placeholder: Israel, Hebrew
+  - type: dropdown
+    id: build
+    attributes:
+      label: Will you build it?
+      options:
+        - I would like to build it and open a pull request
+        - I can help test it
+        - I am only proposing the idea
+    validations:
+      required: true

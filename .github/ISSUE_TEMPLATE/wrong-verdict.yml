@@ -1,0 +1,56 @@
+name: Wrong verdict
+description: The workflow called something safe that was not, or flagged something legitimate
+title: "[Verdict] "
+labels: ["wrong verdict"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Wrong verdicts are the most useful reports this project gets.
+        **Remove every personal detail** from what you paste: names, phone numbers, ID or account numbers, addresses, tracking codes. Defang every link (`hxxps://example[.]com`).
+        If a crafted message or page can **make the bot call a scam safe on purpose** (prompt injection, allowlist bypass), report it privately under **Security → Report a vulnerability** instead.
+  - type: dropdown
+    id: direction
+    attributes:
+      label: What went wrong
+      options:
+        - A scam or phishing message was called safe (🟢)
+        - A legitimate message or store was flagged (🔴 / 🟠 / 🎣)
+        - The verdict was the right color but the findings were wrong or invented
+        - The bot answered with something other than a verdict
+    validations:
+      required: true
+  - type: dropdown
+    id: branch
+    attributes:
+      label: What was sent
+      options:
+        - A message with a link (phishing branch)
+        - A bare link to a store or site (store branch)
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: The input, anonymized and defanged
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: got
+    attributes:
+      label: The verdict you got
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should have said, and why
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: n8n version and model
+      placeholder: n8n 2.27, Tier 1 Claude Haiku 4.5
