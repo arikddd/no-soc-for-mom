@@ -1,0 +1,30 @@
+# Secrets & credentials — never commit these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials/
+secrets/
+
+# n8n exports may contain embedded credentials — export sanitized only
+**/*credentials*.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node (if helper scripts are added later)
+node_modules/
+
+# Python (if helper scripts are added later)
+.venv/
+__pycache__/
+*.pyc
+
+# Logs & temp
+*.log
+tmp/
